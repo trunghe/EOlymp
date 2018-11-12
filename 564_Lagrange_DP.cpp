@@ -1,3 +1,7 @@
+/*
+ * https://www.e-olymp.com/en/problems/564
+ */
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -17,13 +21,12 @@ ll n;
 
 void initSquares() {
     ll i = 0;
-    ll square = i * i;
+    ll square = 0;
     while (square < MAX) {
         squares[i++] = square;
         isSquare[square] = true;
         square = i * i;
     }
-
 //    FOR(i, 0, ROOT_MAX) {
 //        cerr << squares[i] << " " << isSquare[squares[i]] << endl;
 //    }
@@ -31,7 +34,7 @@ void initSquares() {
 }
 
 bool done(int diff, int last) {
-    if (diff < 1 || diff < last) {
+    if (diff < last) {
         return true;
     }
     if (isSquare[diff]) {
