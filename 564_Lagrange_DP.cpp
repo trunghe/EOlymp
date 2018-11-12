@@ -48,10 +48,7 @@ void solve() {
 //    cerr << "n = " << n << endl;
     if (reps[n] < 1) {
         // One
-        if (isSquare[n]) {
-            reps[n]++;
-//            cerr << sqrt(n) << "^2" << endl;
-        }
+        done(n, 0);
         // Two
         FOR(i, 1, ROOT_MAX) {
             if (done(n - squares[i], squares[i])) {
