@@ -1,3 +1,6 @@
+/*
+ * https://www.e-olymp.com/en/problems/987
+ */
 #include <bits/stdc++.h>
 
 using namespace std;
